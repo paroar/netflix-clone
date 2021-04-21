@@ -6,9 +6,9 @@ import { Header, Profiles } from '../components';
 const SelectProfileContainer = ({ user, setProfile }) => (
   <>
     <Header bg={false}>
-      <Header.Container>
+      <Header.Frame>
         <Header.Logo to={HOME} src={logo} />
-      </Header.Container>
+      </Header.Frame>
     </Header>
 
     <Profiles>

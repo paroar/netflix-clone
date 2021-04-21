@@ -35,9 +35,9 @@ const Signin = () => {
   return (
     <>
       <Header>
-        <Header.Container>
+        <Header.Frame>
           <Header.Logo to={HOME} src={logo} alt="Netflix" />
-        </Header.Container>
+        </Header.Frame>
         <Form>
           <Form.Title>Sign In</Form.Title>
           {error && <Form.Error>{error}</Form.Error>}

@@ -5,10 +5,10 @@ import logo from '../logo.svg';
 
 const HeaderContainer = ({ children }) => (
   <Header>
-    <Header.Container>
+    <Header.Frame>
       <Header.Logo to={HOME} src={logo} alt="Netflix" />
       <Header.ButtonLink to={SIGN_IN}>Sign In</Header.ButtonLink>
-    </Header.Container>
+    </Header.Frame>
     {children}
   </Header>
 );

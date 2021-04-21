@@ -44,9 +44,9 @@ const Signup = () => {
   return (
     <>
       <Header>
-        <Header.Container>
+        <Header.Frame>
           <Header.Logo to={HOME} src={logo} alt="Netflix" />
-        </Header.Container>
+        </Header.Frame>
         <Form>
           <Form.Title>Sign Up</Form.Title>
           {error && <Form.Error>{error}</Form.Error>}
