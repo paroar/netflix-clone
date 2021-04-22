@@ -20,10 +20,6 @@ const selectionFilter = ({ series, films }) => ({
       title: 'Fell Good',
       data: series.filter((item) => item.genre === 'fell-good'),
     },
-    {
-      title: 'Documentaries',
-      data: series.filter((item) => item.genre === 'documentaries'),
-    },
   ],
   films: [
     {
