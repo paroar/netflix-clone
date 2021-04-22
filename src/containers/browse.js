@@ -35,6 +35,11 @@ const BrowseContainer = ({ slides }) => {
                   <Header.Picture src={user.photoURL} />
                   <Header.TextLink>{user.displayName}</Header.TextLink>
                 </Header.Group>
+                <Header.Group>
+                  <Header.TextLink onClick={() => firebase.auth().signOut()}>
+                    Sign out
+                  </Header.TextLink>
+                </Header.Group>
               </Header.DropDown>
             </Header.Profile>
           </Header.Group>
