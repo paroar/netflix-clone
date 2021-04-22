@@ -16,6 +16,7 @@ import {
   Search,
   SearchIcon,
   SearchInput,
+  PlayButton,
 } from './styles/header';
 
 const Header = ({ bg = true, children, ...restProps }) =>
@@ -88,3 +89,7 @@ Header.Search = ({ searchTerm, setSearchTerm, ...restProps }) => {
     </Search>
   );
 };
+
+Header.PlayButton = ({ children, ...restProps }) => (
+  <PlayButton {...restProps}>{children}</PlayButton>
+);
