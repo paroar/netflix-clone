@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Background,
@@ -13,6 +13,9 @@ import {
   Picture,
   DropDown,
   Profile,
+  Search,
+  SearchIcon,
+  SearchInput,
 } from './styles/header';
 
 const Header = ({ bg = true, children, ...restProps }) =>
@@ -65,3 +68,23 @@ Header.DropDown = ({ children, ...restProps }) => (
 Header.Profile = ({ children, ...restProps }) => (
   <Profile {...restProps}>{children}</Profile>
 );
+
+Header.Search = ({ searchTerm, setSearchTerm, ...restProps }) => {
+  const [searchActive, setSearchActive] = useState(false);
+
+  return (
+    <Search {...restProps}>
+      <SearchIcon
+        onClick={() => setSearchActive((searchActive) => !searchActive)}
+      >
+        <img src="/images/icons/search.png" alt="Search" />
+      </SearchIcon>
+      <SearchInput
+        value={searchTerm}
+        onChange={({ target }) => setSearchTerm(target.value)}
+        placeholder="Search films and series"
+        active={searchActive}
+      />
+    </Search>
+  );
+};
