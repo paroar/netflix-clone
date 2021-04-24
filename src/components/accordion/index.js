@@ -2,6 +2,7 @@ import React, { createContext, useState, useContext } from 'react';
 import {
   Container,
   Inner,
+  Frame,
   Title,
   Item,
   Header,
@@ -20,6 +21,10 @@ export default Accordion;
 
 Accordion.Title = ({ children, ...restProps }) => (
   <Title {...restProps}>{children}</Title>
+);
+
+Accordion.Frame = ({ children, ...restProps }) => (
+  <Frame {...restProps}>{children}</Frame>
 );
 
 Accordion.Item = ({ children, ...restProps }) => {
