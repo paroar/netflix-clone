@@ -20,7 +20,13 @@ import {
 } from './styles/header';
 
 const Header = ({ bg = true, children, ...restProps }) =>
-  bg ? <Background {...restProps}>{children}</Background> : children;
+  bg ? (
+    <Background {...restProps} data-testid="header-bg">
+      {children}
+    </Background>
+  ) : (
+    children
+  );
 
 export default Header;
 
@@ -77,6 +83,7 @@ Header.Search = ({ searchTerm, setSearchTerm, ...restProps }) => {
     <Search {...restProps}>
       <SearchIcon
         onClick={() => setSearchActive((searchActive) => !searchActive)}
+        data-testid="search-click"
       >
         <img src="/images/icons/search.png" alt="Search" />
       </SearchIcon>
@@ -85,6 +92,7 @@ Header.Search = ({ searchTerm, setSearchTerm, ...restProps }) => {
         onChange={({ target }) => setSearchTerm(target.value)}
         placeholder="Search films and series"
         active={searchActive}
+        data-testid="search-input"
       />
     </Search>
   );
